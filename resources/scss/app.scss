@@ -1,5 +1,216 @@
 @import './variables';
 
 body{
+    background-color: $background;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: $secondary;
+}
+
+nav{    
     background-color: $primary;
+    color: $background;
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px 20px 20px;
+}
+
+.navItems{
+    display: flex;
+    justify-content: space-between;
+    font-family: $titleFont;
+}
+
+.navItem{
+    margin: 0px 30px 0px 30px;
+    color: $background;
+}
+
+//hero section or Landing Page
+.hero{
+    background-color: $primary;
+    font-family: $titleFont;
+    color: $light;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15% 20% 20% 20%;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 90px;
+}
+
+@media screen and(max-width: 426px){
+    h1{
+        font-size: 60px;
+    }
+}
+
+//About me sectioon Home page
+
+.aboutme{
+    color: $primary;
+    padding: 100px 200px 200px 200px;
+    font-family: $titleFont;
+    text-align: center;
+}
+
+@media screen and(max-width: 426px){
+    .aboutme{
+        padding: 30px;
+    }
+}
+
+// Projects Section Home Page
+.projects{
+    background-color: $primary;
+    padding: 50px;
+    font-family: $titleFont;
+    color: $light;
+    text-align: center;
+    justify-content: center;
+}
+
+.wrapper {
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) ) ;
+    justify-content: center;
+}
+
+.box{
+    background-color: $light;
+    color: $base;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+.box img{
+    width: 100%;
+}
+.dText{
+    padding: 10px;
+}
+.dText p{
+    font-family: $bodyFont;
+    font-size: medium;
+}
+.box button{
+    background-color: $secondary;
+    color: $light;
+    font-size: medium;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+}
+.box button:hover{
+    background-color: $base;
+}
+
+//bookshelf Part
+.bookshelf{
+    background-color: $background;
+    padding: 50px;
+    font-family: $titleFont;
+    color: $primary;
+    text-align: center;
+    justify-content: center;
+}
+
+.books{
+    background-color: $background;
+    color: $base;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+.books img{
+    width: 100%;
+}
+
+.books a{
+    color: $base;
+    font-family: $titleFont;
+    padding: 10px;
+    font-size: large;
+}
+.books a:hover{
+    color: $light;
+}
+
+//footer
+footer{
+    background-color: $primary;
+    color: $light;
+    font-family: $titleFont;
+    padding: 100px;
+    text-align: center;
+}
+
+//Project Page
+.pContainer{
+    background-color: $background;
+    color: $primary;
+    font-family: $titleFont;
+    padding: 50px;
+    text-align: center;
+}
+
+.pContainer img{
+    width: 100%;
+}
+
+.pContainer p{
+    font-family: $bodyFont;
+    margin-top: 10px;
+}
+
+.pContainer button{
+    background-color: $secondary;
+    color: $light;
+    font-size: medium;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+}
+.pContainer button:hover{
+    background-color: $base;
+}
+
+
+//admin pages
+
+.addProject{
+    margin: 50px 100px 100px 100px;
+    padding: 50px;
+    font-family: $titleFont;
+    color: $primary;
+}
+.addProject h2{
+    text-align: center;
+}
+.addProject button{
+    background-color: $secondary;
+    color: $light;
+    font-size: medium;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+    margin: auto;
+}
+.addProject button:hover{
+    background-color: $base;
+}
+
+.addProject label{
+    text-align: left;
 }

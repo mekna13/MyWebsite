@@ -5,10 +5,22 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/app.css">
     </head>
-    <h2>This is layout section</h2>
-    
-
-    <%- body %> 
+    <nav>
+        <div class="navItems">
+            <a href="#" class="navItem">projects</a>
+            <a href="#" class="navItem">home</a>
+            <a href="#" class="navItem">bookshelf</a>
+        </div>
+       
+    </nav>
+    <body>
+        <%- body %> 
+    </body>
+    <footer>
+        <h4>Made with Love</h4>
+        <p>Hosted on AWS</p>
+    </footer>
 </html>

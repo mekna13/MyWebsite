@@ -1,3 +1,214 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 body {
-  background-color: red;
+  background-color: #f8f1f1;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c6a9a3;
+}
+
+nav {
+  background-color: #9a8194;
+  color: #f8f1f1;
+  display: flex;
+  justify-content: center;
+  padding: 20px 30px 20px 20px;
+}
+
+.navItems {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto Mono", monospace;
+}
+
+.navItem {
+  margin: 0px 30px 0px 30px;
+  color: #f8f1f1;
+}
+
+.hero {
+  background-color: #9a8194;
+  font-family: "Roboto Mono", monospace;
+  color: #FFD6F5;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15% 20% 20% 20%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 90px;
+}
+
+@media screen and (max-width: 426px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+.aboutme {
+  color: #9a8194;
+  padding: 100px 200px 200px 200px;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+}
+
+@media screen and (max-width: 426px) {
+  .aboutme {
+    padding: 30px;
+  }
+}
+.projects {
+  background-color: #9a8194;
+  padding: 50px;
+  font-family: "Roboto Mono", monospace;
+  color: #FFD6F5;
+  text-align: center;
+  justify-content: center;
+}
+
+.wrapper {
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+}
+
+.box {
+  background-color: #FFD6F5;
+  color: #695865;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.box img {
+  width: 100%;
+}
+
+.dText {
+  padding: 10px;
+}
+
+.dText p {
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+}
+
+.box button {
+  background-color: #c6a9a3;
+  color: #FFD6F5;
+  font-size: medium;
+  border-radius: 5px;
+  border-style: none;
+  padding: 10px;
+}
+
+.box button:hover {
+  background-color: #695865;
+}
+
+.bookshelf {
+  background-color: #f8f1f1;
+  padding: 50px;
+  font-family: "Roboto Mono", monospace;
+  color: #9a8194;
+  text-align: center;
+  justify-content: center;
+}
+
+.books {
+  background-color: #f8f1f1;
+  color: #695865;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.books img {
+  width: 100%;
+}
+
+.books a {
+  color: #695865;
+  font-family: "Roboto Mono", monospace;
+  padding: 10px;
+  font-size: large;
+}
+
+.books a:hover {
+  color: #FFD6F5;
+}
+
+footer {
+  background-color: #9a8194;
+  color: #FFD6F5;
+  font-family: "Roboto Mono", monospace;
+  padding: 100px;
+  text-align: center;
+}
+
+.pContainer {
+  background-color: #f8f1f1;
+  color: #9a8194;
+  font-family: "Roboto Mono", monospace;
+  padding: 50px;
+  text-align: center;
+}
+
+.pContainer img {
+  width: 100%;
+}
+
+.pContainer p {
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+}
+
+.pContainer button {
+  background-color: #c6a9a3;
+  color: #FFD6F5;
+  font-size: medium;
+  border-radius: 5px;
+  border-style: none;
+  padding: 10px;
+}
+
+.pContainer button:hover {
+  background-color: #695865;
+}
+
+.addProject {
+  margin: 50px 100px 100px 100px;
+  padding: 50px;
+  font-family: "Roboto Mono", monospace;
+  color: #9a8194;
+}
+
+.addProject h2 {
+  text-align: center;
+}
+
+.addProject button {
+  background-color: #c6a9a3;
+  color: #FFD6F5;
+  font-size: medium;
+  border-radius: 5px;
+  border-style: none;
+  padding: 10px;
+  margin: auto;
+}
+
+.addProject button:hover {
+  background-color: #695865;
+}
+
+.addProject label {
+  text-align: left;
 }
