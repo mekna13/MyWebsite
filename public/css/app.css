@@ -102,7 +102,7 @@ h1 {
 }
 
 .box button {
-  background-color: #c6a9a3;
+  background-color: #695865;
   color: #FFD6F5;
   font-size: medium;
   border-radius: 5px;
@@ -111,7 +111,7 @@ h1 {
 }
 
 .box button:hover {
-  background-color: #695865;
+  background-color: #c6a9a3;
 }
 
 .bookshelf {
@@ -172,7 +172,7 @@ footer {
 }
 
 .pContainer button {
-  background-color: #c6a9a3;
+  background-color: #695865;
   color: #FFD6F5;
   font-size: medium;
   border-radius: 5px;
@@ -181,7 +181,7 @@ footer {
 }
 
 .pContainer button:hover {
-  background-color: #695865;
+  background-color: #c6a9a3;
 }
 
 .addProject {
@@ -196,7 +196,7 @@ footer {
 }
 
 .addProject button {
-  background-color: #c6a9a3;
+  background-color: #695865;
   color: #FFD6F5;
   font-size: medium;
   border-radius: 5px;
@@ -206,9 +206,39 @@ footer {
 }
 
 .addProject button:hover {
-  background-color: #695865;
+  background-color: #c6a9a3;
 }
 
 .addProject label {
+  text-align: left;
+}
+
+.addProject .delForm button {
+  border-radius: 50%;
+  padding: 10px 15px 10px 15px;
+}
+
+.login {
+  margin: 50px 100px 100px 100px;
+  padding: 50px 400px 50px 400px;
+  font-family: "Roboto Mono", monospace;
+  color: #9a8194;
+}
+
+.login button {
+  background-color: #695865;
+  color: #FFD6F5;
+  font-size: medium;
+  border-radius: 5px;
+  border-style: none;
+  padding: 10px;
+  margin: auto;
+}
+
+.login button:hover {
+  background-color: #c6a9a3;
+}
+
+.login label {
   text-align: left;
 }

@@ -10,3 +10,13 @@ SETUP STEPS
 { yarn add cross-env -D}
 - to compile laravel
 { npx mix watch }
+
+
+Step i followed
+- create all views and style them
+- set up routes
+    - create controllers
+    - create functions in controllers 
+    - in web.js import controllers and set the routes in function initRoutes(app)
+    - set routes
+    - install flash and session for error messages

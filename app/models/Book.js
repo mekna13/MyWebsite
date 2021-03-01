@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const post = {
+const book = {
     title:{
         type: String,
         required: true
     },
-    body:{
+    review:{
         type: String,
         required: true
     },

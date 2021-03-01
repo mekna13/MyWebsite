@@ -1,14 +1,31 @@
 <div class="addProject">
     <h2>Add Project</h2>
-    <form>
+    <form action="/addProject" method="POST" enctype="multipart/form-data">
+      <%  if(messages.error) { %> 
+        <span><%=  messages.error %> </span>
+    <% }  %> 
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Project Title</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <label for="title" class="form-label">Project Title</label>
+          <input type="text" name="title" class="form-control">
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="description" class="form-label">Description</label>
+          <textarea name="description" class="form-control" rows="5"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="mb-3">
+          <label for="github" class="form-label">Github Link</label>
+          <input type="text" name="github" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="directLink" class="form-label">Project Link</label>
+          <input type="text" name="directLink" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="file" class="form-label">Image Upload</label>
+          <input type="file" name="file" class="form-control" required>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit">Submit</button>
+        </div>
       </form>
 </div>

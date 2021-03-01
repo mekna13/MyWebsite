@@ -1,0 +1,19 @@
+<div class="login">
+    <h2 style="text-align: center;">Admin Login</h2>
+    <% if(messages.error) { %>
+        <span><%= messages.error %> </span>
+    <% } %>  
+    <form action="/adminLogin" method="POST">
+        <div class="mb-3">
+            <label for="admin_name" class="form-label">Admin Name</label>
+            <input type="text" name="admin_name" class="form-control" width="300px">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Admin Key</label>
+            <input type="password" name="password" class="form-control" width="300px">
+        </div>
+        <div class="mb-3 d-flex justify-content-center">
+            <button type="submit">login</button>
+        </div>
+    </form>
+</div>

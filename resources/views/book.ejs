@@ -2,13 +2,17 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <img src="https://i.pinimg.com/236x/28/b5/61/28b561e54c352fbdae654c1d3677b59e.jpg" alt="">
+                <img src="<%= book.bookCoverLink %>" alt="">
             </div>
             <div class="col-sm">
-                <h3> Little Women</h3>
-                <h4>Louisa May Alcot</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum voluptatum officiis, assumenda provident rem eius neque! Quas quae accusamus voluptatum perspiciatis! Soluta ea sint maxime unde esse quas, illo vero.</p>
-             
+                <h3><%= book.title %> </h3>
+                <h4><%= book.author %> </h4>
+                <p><%= book.review %> </p>
+                <% if(user){ %>
+                    <a href="/editBook/<%= book._id %> ">
+                        <button>Edit Review</button>
+                    </a>
+                <% } %>  
             </div>
         </div>
     </div>

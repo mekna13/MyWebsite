@@ -104,7 +104,7 @@ h1{
     font-size: medium;
 }
 .box button{
-    background-color: $secondary;
+    background-color: $base;
     color: $light;
     font-size: medium;
     border-radius: 5px;
@@ -112,7 +112,7 @@ h1{
     padding: 10px;
 }
 .box button:hover{
-    background-color: $base;
+    background-color: $secondary;
 }
 
 //bookshelf Part
@@ -175,7 +175,7 @@ footer{
 }
 
 .pContainer button{
-    background-color: $secondary;
+    background-color: $base;
     color: $light;
     font-size: medium;
     border-radius: 5px;
@@ -183,7 +183,7 @@ footer{
     padding: 10px;
 }
 .pContainer button:hover{
-    background-color: $base;
+    background-color: $secondary;
 }
 
 
@@ -199,7 +199,7 @@ footer{
     text-align: center;
 }
 .addProject button{
-    background-color: $secondary;
+    background-color: $base;
     color: $light;
     font-size: medium;
     border-radius: 5px;
@@ -208,9 +208,36 @@ footer{
     margin: auto;
 }
 .addProject button:hover{
-    background-color: $base;
+    background-color: $secondary;
+}
+.addProject label{
+    text-align: left;
+}
+.addProject .delForm button{
+    border-radius: 50%;
+    padding: 10px 15px 10px 15px;
 }
 
-.addProject label{
+//login Page
+.login{
+    margin: 50px 100px 100px 100px;
+    padding: 50px 400px 50px 400px;
+    font-family: $titleFont;
+    color: $primary;
+}
+
+.login button{
+    background-color: $base;
+    color: $light;
+    font-size: medium;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+    margin: auto;
+}
+.login button:hover{
+    background-color: $secondary;
+}
+.login label{
     text-align: left;
 }

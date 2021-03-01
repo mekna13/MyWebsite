@@ -13,12 +13,12 @@ const project = {
     github: {
         type: String,
         required: true
-    },
+    }, 
     directLink: {
         type: String
     },
     img: {
-        String: true
+        type: String,
     }
 }
 
