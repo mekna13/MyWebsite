@@ -60,7 +60,9 @@ app.use(( req, res, next) => {
 //setting the routes to another file
 require('./routes/web')(app)
 
-
+app.use((req,res) => {
+    res.status(404).render('404')
+})
 const server = app.listen(PORT, () => {
     console.log(`Starting PORT ${PORT}`)
 });

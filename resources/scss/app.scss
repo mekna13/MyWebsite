@@ -42,6 +42,15 @@ nav{
     padding: 15% 20% 20% 20%;
 }
 
+.hero a{
+    text-decoration: none;
+    color: $light;
+}
+.hero a:hover{
+    text-decoration: none;
+    color: $background;
+}
+
 h1{
     font-weight: 700;
     font-size: 90px;
@@ -68,12 +77,31 @@ h1{
     }
 }
 
+.skill{
+    background-color: $primary;
+    color: $background;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.links a{
+    text-decoration: none;
+    color: $primary;
+}
+.links a:hover{
+    text-decoration: none;
+    color: $base;
+}
+.links i{
+    font-size: 35px;
+    margin: 10px 20px 10px 20px;
+}
 // Projects Section Home Page
 .projects{
     background-color: $primary;
     padding: 50px;
     font-family: $titleFont;
-    color: $light;
+    color: $background;
     text-align: center;
     justify-content: center;
 }
@@ -87,7 +115,7 @@ h1{
 }
 
 .box{
-    background-color: $light;
+    background-color: $background;
     color: $base;
     border-radius: 5px;
     padding: 20px;
@@ -151,7 +179,7 @@ h1{
 footer{
     background-color: $primary;
     color: $light;
-    font-family: $titleFont;
+    font-family: $bodyFont;
     padding: 100px;
     text-align: center;
 }
@@ -185,7 +213,14 @@ footer{
 .pContainer button:hover{
     background-color: $secondary;
 }
-
+//404  page
+.error{
+    margin: 200px;
+    font-family: $titleFont;
+    color: $base;
+    background-color: $background;
+    text-align: center;
+}
 
 //admin pages
 

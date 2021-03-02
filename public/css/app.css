@@ -41,6 +41,16 @@ nav {
   padding: 15% 20% 20% 20%;
 }
 
+.hero a {
+  text-decoration: none;
+  color: #FFD6F5;
+}
+
+.hero a:hover {
+  text-decoration: none;
+  color: #f8f1f1;
+}
+
 h1 {
   font-weight: 700;
   font-size: 90px;
@@ -63,11 +73,34 @@ h1 {
     padding: 30px;
   }
 }
+.skill {
+  background-color: #9a8194;
+  color: #f8f1f1;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #9a8194;
+}
+
+.links a:hover {
+  text-decoration: none;
+  color: #695865;
+}
+
+.links i {
+  font-size: 35px;
+  margin: 10px 20px 10px 20px;
+}
+
 .projects {
   background-color: #9a8194;
   padding: 50px;
   font-family: "Roboto Mono", monospace;
-  color: #FFD6F5;
+  color: #f8f1f1;
   text-align: center;
   justify-content: center;
 }
@@ -81,7 +114,7 @@ h1 {
 }
 
 .box {
-  background-color: #FFD6F5;
+  background-color: #f8f1f1;
   color: #695865;
   border-radius: 5px;
   padding: 20px;
@@ -149,7 +182,7 @@ h1 {
 footer {
   background-color: #9a8194;
   color: #FFD6F5;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto", sans-serif;
   padding: 100px;
   text-align: center;
 }
@@ -182,6 +215,14 @@ footer {
 
 .pContainer button:hover {
   background-color: #c6a9a3;
+}
+
+.error {
+  margin: 200px;
+  font-family: "Roboto Mono", monospace;
+  color: #695865;
+  background-color: #f8f1f1;
+  text-align: center;
 }
 
 .addProject {
