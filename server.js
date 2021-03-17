@@ -55,7 +55,7 @@ app.use(passport.session())
 app.use(( req, res, next) => {
     res.locals.session = req.session
     res.locals.user = req.user
-    next()
+    next() 
 })
 //setting the routes to another file
 require('./routes/web')(app)
