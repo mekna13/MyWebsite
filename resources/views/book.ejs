@@ -7,7 +7,7 @@
             <div class="col-sm">
                 <h3><%= book.title %> </h3>
                 <h4><%= book.author %> </h4>
-                <p><%= book.review %> </p>
+                <%= book.review %> 
                 <% if(user){ %>
                     <a href="/editBook/<%= book._id %> ">
                         <button>Edit Review</button>
