@@ -1,0 +1,27 @@
+<div class="addProject">
+    <h2>add Experience</h2>
+    <form action="/addExperience" method="POST" enctype="multipart/form-data">
+      <%  if(messages.error) { %> 
+        <span><%=  messages.error %> </span>
+    <% }  %> 
+        <div class="mb-3">
+          <label for="title" class="form-label">Experience Title</label>
+          <input type="text" name="title" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea name="description" class="form-control" rows="5"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="skills" class="form-label">Skills</label>
+          <input type="text" name="skills" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="file" class="form-label">Image Upload</label>
+          <input type="file" name="file" class="form-control" required>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+</div>

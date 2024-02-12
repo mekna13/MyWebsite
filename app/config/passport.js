@@ -10,7 +10,9 @@ function init(passport){
         if(!admin){
             return done(null,false,{ message: 'No admin found'})
         }
-
+        // bcrypt.hash(password, 10, function(err, hash) {
+        //     console.log("PASSWORD HASH THIS",hash)
+        // });
         bcrypt.compare(password, admin.password).then(match => {
             if(match){
                 return done(null,admin,{ message: 'Logged in Successfully'})

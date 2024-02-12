@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
 
-const project = {
+const experience = {
     title: {
         type: String,
         required: true
@@ -10,17 +10,14 @@ const project = {
         type: String,
         required: true
     },
-    github: {
-        type: String,
-    }, 
-    directLink: {
-        type: String
+    skills: {
+        type: [String]
     },
     img: {
         type: String,
     }
 }
 
-const ProjectSchema = new Schema(project)
+const ExperienceSchema = new Schema(experience)
 
-module.exports = mongoose.model("projects",ProjectSchema);
+module.exports = mongoose.model("experience",ExperienceSchema);

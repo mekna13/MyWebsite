@@ -1,20 +1,21 @@
-const Project = require("../../models/Project")
+const Experience = require("../../models/Experience")
 
 
-function projectController(){
+function experienceController(){
 
     return{
 
-        addProject(req,res){
-            res.render('addProject')
+        addExperience(req,res){
+            res.render('addExperience')
         },
-        async addProjectPost(req,res,next){
+        async addExperiencePost(req,res,next){
 
             const title = req.body.title
             const description = req.body.description
             const img = req.file.filename
-            const directLink = req.body?.directLink || ""
-            const github = req.body?.github || ""
+
+            const skills = req.body?.skills ? req.body.skills.split(',') : []
+    
 
             if(!title || !description  || !img){
                 req.flash('error',"All fields Required")
@@ -24,41 +25,40 @@ function projectController(){
     
                 return res.redirect('/addProject')
             }
-            const newProject = await new Project({
+            const newExperience = await new Experience({
                 title,
                 description,
-                github,
-                directLink,
+                skills,
                 img
             });
 
-            newProject.save().then((newProject) => {
-                const id = newProject._id
-                return res.redirect(`project/${ id }`)
+            newExperience.save().then((newExperience) => {
+                const id = newExperience._id
+                return res.redirect(`experience/${ id }`)
             }).catch((err) => {
                 req.flash("Something Went Wrong")
                 res.send(err)
             })
         },
-        async singleProject(req, res){
+        async singleExperience(req, res){
 
-            const project = await Project.findById(req.params.id)
-            return res.render('project',{ project : project })
+            const experience = await Experience.findById(req.params.id)
+            return res.render('experience',{ experience : experience })
         },
-        async editProject(req,res){
+        async editExperience(req,res){
 
-            const project = await Project.findById(req.params.id)
+            const experience = await Experience.findById(req.params.id)
 
-            return res.render('editProject',{ project: project })
+            return res.render('editExperience',{ experience: experience })
         },
-        async editProjectUpdate(req,res){
+        async editExperienceUpdate(req,res){
 
             const id = req.params.id
             const title = req.body.title
             const description = req.body.description
-            const github = req.body.github
+            const skills = req.body?.skills ? req.body.skills.split : []
+
             const img = req.file.filename
-            const directLink = req.body.directLink
 
             if(!title || !description  || !img){
 
@@ -67,17 +67,16 @@ function projectController(){
                 req.flash('description',description)
                 req.flash('img',img)
     
-                return res.redirect('/addProject')
+                return res.redirect('/addExperience')
             }
 
-            const project = await Project.findByIdAndUpdate(
+            const experience = await Experience.findByIdAndUpdate(
                 id,
                 {
                     title: title,
                     description: description,
-                    github: github,
-                    directLink: directLink,
-                    img: img
+                    img: img,
+                    skills: skills
                 },
                 function(err){
                     if(err){
@@ -85,14 +84,14 @@ function projectController(){
                         return res.send(err);
                     }
 
-                    return res.redirect(`/project/${ id }`)
+                    return res.redirect(`/experience/${ id }`)
                 }
             )
         },
-        async editProjectDelete(req,res){
+        async editExperienceDelete(req,res){
             const id = req.params.id;
 
-            const project = await Project.findByIdAndDelete(
+            const experience = await Experience.findByIdAndDelete(
                 id,
                 function(err){
                     if(err){
@@ -107,4 +106,4 @@ function projectController(){
     }
 }
 
-module.exports = projectController;
+module.exports = experienceController;

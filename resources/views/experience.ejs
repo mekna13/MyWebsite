@@ -1,0 +1,25 @@
+<div class="pContainer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="/uploads/<%= experience.img %> " alt="">
+            </div>
+            <div class="col-sm">
+                <h3><%= experience.title %></h3>
+                <p><%= experience.description %> </p>
+
+                <h4> Technologies Learned</h4>
+                <% if (experience.skills.length !== 0) { %>
+                    <% for (let i = 0; i < experience.skills.length; i += 3) { %>
+                        <div class="row">
+                        <% for (let j = i; j < i + 3 && j < experience.skills.length; j++) { %>
+                            <div class="skill col-sm"><%= experience.skills[j] %></div>
+                        <% } %>
+                        </div>
+                    <% } %>
+             </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

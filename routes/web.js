@@ -2,6 +2,7 @@
 const bookController = require('../app/http/controllers/bookController')
 const homeController = require('../app/http/controllers/homeController')
 const projectController = require('../app/http/controllers/projectController')
+const experienceController = require('../app/http/controllers/experienceController')
 //Middlewares
 const upload = require('../app/http/middlewares/upload')
 //restricts guests from admin pages
@@ -32,6 +33,10 @@ function initRoutes(app){
     app.put('/editProject/:id',guest,upload,projectController().editProjectUpdate)
     app.delete('/editProject/:id',guest,projectController().editProjectDelete)
 
+    //experience routes
+    app.get('/addExperience',guest,experienceController().addExperience)
+    app.post('/addExperience',guest,upload,experienceController().addExperiencePost)
+    app.get('/experience/:id',experienceController().singleExperience)
    
 }
 
