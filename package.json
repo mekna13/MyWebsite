@@ -4,7 +4,11 @@
   "description": "My personal Website",
   "main": "server.js",
   "author": "Meghna Pradhan",
+  "engines": {
+   "node": "16.10.0"
+   },
   "scripts": {
+    "start": "node server.js",
     "serve": "node server.js",
     "dev": "nodemon server.js",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
