@@ -57,7 +57,7 @@ function projectController(){
             const title = req.body.title
             const description = req.body.description
             const github = req.body.github
-            const img = req.file.filename
+            const img = req.body.file
             const directLink = req.body.directLink
 
             if(!title || !description  || !img){

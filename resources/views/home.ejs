@@ -195,11 +195,13 @@
     <div class="wrapper">
         <% projects.forEach((project) => { %>
         <div class="box">
+          <div class="overlay">
             <img src="/uploads/<%= project.img %> " alt="">
             <div class="dText">
-                <h4><%= project.title %> </h4>
+          <h4><%= project.title %> </h4>
             </div>
-            <a href="project/<%= project._id %> "><button>Go To Project</button></a>
+          </div>
+          <a href="project/<%= project._id %> "><button>Go To Project</button></a>
         </div>
         <% }) %> 
     </div>
@@ -220,3 +222,5 @@
 
     </div>
 </div>
+
+
